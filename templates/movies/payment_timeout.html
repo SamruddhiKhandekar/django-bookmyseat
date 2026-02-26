@@ -1,0 +1,25 @@
+{% extends "users/basic.html" %}
+
+{% block content %}
+
+<div class="container d-flex justify-content-center mt-5">
+    <div class="card shadow p-4" style="max-width: 500px; width: 100%;">
+        <div class="text-center">
+            <i class="fas fa-hourglass-end text-warning" style="font-size: 80px;"></i>
+            <h2 class="mt-3">Reservation Timeout</h2>
+            <p class="lead">
+                You exceeded the 5 minute seat reservation limit<br>
+                Your booking could not be completed.<br>
+                The amount will be refunded within 24 hours.<br> 
+            </p>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="{% url 'movie_list' %}" class="btn btn-secondary btn-lg mt-2">
+                Back to Movies
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
